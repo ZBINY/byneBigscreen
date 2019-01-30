@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巴盟大数据可视化平台</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <!--启动页-->
+    <video poster="./image/video.jpg" id="bgvid"  autoplay muted>
+        <source src="./image/video.mp4" type="video/mp4">
+    </video>
+
+    <!--大屏内容-->
+    <div class="box" style="display:none;">
+        <div class="byneBigscreen">
+        <div class="title-wrapper">
+            <div class="title-content">
+                <p class="p1">市场主体分布</p>
+                <p>网络主体分布</p>
+                <p>综合执法</p>
+                <p>商标申请情况</p>
+            </div>
+
+            <div class="nav-wrapper nav-wrapper0">
+                <p class="show">主体地区分布</p>
+                <p>主体类型分布</p>
+                <p>主体年报分布</p>
+            </div>
+            <div class="nav-wrapper nav-wrapper1" style="display: none;">
+                <p class="show">主体地区分布</p>
+                <p>主体类型分布</p>
+                <p>主体年报分布</p>
+                <p>网络交易分析</p>
+            </div>
+            <div class="nav-wrapper nav-wrapper2" style="display: none;">
+                <p class="show">年度检查分布</p>
+                <p>年度案件分布</p>
+                <p>广告类检查分布</p>
+                <p>商标类检查分布</p>
+            </div>
+        </div>
+
+        <div class="byneBigscreen-content">
+            <div class="byneBigscreen-lft">
+                <div class="title">
+                    <span class="stress">【电子标识实时状态】</span><span>单位：家</span>
+                </div>
+                <ul class="lft-content lft-content1">
+                    <li class="">
+                        <i></i>
+                        <p>
+                            <span class="stress">18,743</span>
+                            <span>已审核数量（家）</span>
+                        </p>
+                        <p class="line"></p>
+                    </li>
+                    <li class="">
+                        <i></i>
+                        <p>
+                            <span class="stress">2,328</span>
+                            <span>待审核数量（家）</span>
+                        </p>
+                         <p class="line"></p>
+                    </li>
+                    <li class="">
+                        <i></i>
+                        <p>
+                            <span class="stress">35,982</span>
+                            <span>公示中数量（家）</span>
+                        </p>
+                    </li>
+                </ul>
+                <div class="title">
+                    <span class="stress">【电子标识地区分布】</span><span>单位：家</span>
+                </div>
+                <div class="lft-content lft-content2">
+                    <div id="lft-content2"  style="width: 530px;height: 150px;"></div>
+                </div>
+                <div class="title">
+                    <span class="stress">【商品抽检】</span><span>单位：个</span>
+                </div>
+                <div class="lft-content lft-content3">
+                    <div class="lft3-zrws">
+                        <p>任务数</p>
+                        <p class="stress">652</p>
+                    </div>
+                    <div class="lft3-top">
+                        <ul class="wcs">
+                            <li class="flex-column-center">
+                                <span>合格</span>
+                                <span>542</span>
+                            </li>
+                            <li class="flex-column-center">
+                                <span>完成数：631</span>
+                                <span>完成率：94%</span>
+                            </li>
+                            <li class="flex-column-center">
+                                <span>不合格</span>
+                                <span>110</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <ul class="lft3-bottom animated container"> -->
+                    <ul class="lft3-bottom move1">
+                        <li class="flex-column-center"></li>
+                        <li class="flex-column-center"></li>
+                        <li class="flex-column-center"></li>
+                        <li class="flex-column-center"></li>
+                        <li class="flex-column-center show"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="byneBigscreen-middle">
+                <div class="middle-wrapper">
+                    <div class="middle-content middle-content1">
+                        <div class="title">
+                            <i></i><span class="stress">主体地区分布</span><span>单位：家</span>
+                        </div>
+                        <div class="middle">
+                            <div class="map">
+                                <div class=" pic pic1" >
+                                    <img src="image/map/map-lh.png">
+                                    <div class="map-data">
+                                        <p class="stress">3,123</p>
+                                        <p>乌拉特前旗</p>
+                                    </div>
+                                </div>
+                                <div class=" pic pic2">
+                                    <img src="image/map/map-wy.png">
+                                    <div class="map-data"></div>
+                                </div>
+                                <div class=" pic pic3">
+                                    <img src="image/map/map-dk.png">
+                                    <div class="map-data"></div>
+                                </div>
+                                <div class=" pic pic4">
+                                    <img src="image/map/map-hjhq.png">
+                                    <div class="map-data"></div>
+                                </div>
+                                <div class=" pic pic5">
+                                    <img src="image/map/map-wltqq.png">
+                                    <div class="map-data"></div>
+                                </div>
+                                <div class=" pic pic6">
+                                    <img src="image/map/map-wltzq.png">
+                                    <div class="map-data"></div>
+                                </div>
+                                <div class=" pic pic7">
+                                    <img src="image/map/map-wlthq.png">
+                                    <div class="map-data"></div>
+                                </div>
+                            </div>
+
+
+                            <div class="alertBox alertBox1">
+                                <!-- <i class="close"></i>
+                                <h2>乌拉特中旗市场主体类型统计</h2>
+                                <p><span class="name">总量：</span><span class="num yellow">2,109家</span></p>
+                                <p><span class="name">内资（非私营）：</span><span class="num">2,109家</span></p>
+                                <p><span class="name">内资（私营）：</span><span class="num">2,109家</span></p>
+                                <p><span class="name">外资：</span><span class="num">2,109家</span></p>
+                                <p><span class="name">农合：</span><span class="num">2,109家</span></p>
+                                <p><span class="name">集团：</span><span class="num">2,109家</span></p>
+                                <p><span class="name">个体：</span><span class="num">2,109家</span></p> -->
+                            </div>
+                            <!-- <div class="alertBox alertBox2">
+                                <i class="close"></i>
+                                <h2>乌拉特中旗市场主体类型统计</h2>
+                                <p><span class="name">企业总量：</span><span class="num">91家</span></p>
+                                <p><span class="name">主体交易量：</span><span class="num">182,324笔</span></p>
+                                <p><span class="name">交易额：</span><span class="num">83,432,439元</span></p>
+                            </div> -->
+                            <!-- div class="alertBox alertBox4">
+                                <i class="close"></i>
+                                <h2>乌拉特中旗商标申请统计分析</h2>
+                                <p><span class="name">商标申请：</span><span class="num yellow">748个</span></p>
+                                <p><span class="name">全市占比：</span><span class="num">9%</span></p>
+                            </div> -->
+
+                        </div>
+                        <div class="bottom-table">
+                            <table class="fir-0" style="display: table;">
+                                <thead>
+                                    <tr><th>市场主体总量</th><th>临河区占比</th><th>五原县占比</th><th>磴口县占比</th><th>杭锦后旗占比</th><th>乌拉特前旗占比</th><th>乌拉特中旗占比</th><th>乌拉特后旗占比</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="yellow">123,421</td><td>18%</td><td>8%</td><td>9%</td><td>13%</td><td>13%</td><td>0%</td><td>9%</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="fir-1">
+                                <thead>
+                                    <tr><th>主体类型企业总量</th><th>内资（非私营）占比</th><th>内资（私营）占比</th><th>外资占比</th><th>农合占比</th><th>集团占比</th><th>个体占比</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="yellow">38,981家</td><td>0.3%</td><td>0.7%</td><td>0.03%</td><td>1.2%</td><td>0.8%</td><td>98%</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="fir-2" style="position: absolute;top: -60px;z-index: 200;margin-bottom: 7px;">
+                                <thead>
+                                    <tr><th>主体类型年报总量</th><th>内资（非私营）占比</th><th>内资（私营）占比</th><th>外资占比</th><th>农合占比</th><th>集团占比</th><th>个体占比</th><th>其他占比</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="yellow">38,981个</td><td>0.3%</td><td>0.7%</td><td>0.03%</td><td>1.2%</td><td>0.8%</td><td>0.05%</td><td>98%</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="fir-2">
+                                <thead>
+                                    <tr><th>主体年报总量</th><th>临河区占比</th><th>五原县占比</th><th>磴口县占比</th><th>杭锦后旗占比</th><th>乌拉特前旗占比</th><th>乌拉特中旗占比</th><th>乌拉特后旗占比</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="yellow">123,421</td><td>18%</td><td>8%</td><td>9%</td><td>13%</td><td>13%</td><td>10%</td><td>9%</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="sec-0">
+                                <thead>
+                                    <tr><th>网络主体总量</th><th>临河区占比</th><th>五原县占比</th><th>磴口县占比</th><th>杭锦后旗占比</th><th>乌拉特前旗占比</th><th>乌拉特中旗占比</th><th>乌拉特后旗占比</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="yellow">123,421</td><td>18%</td><td>8%</td><td>9%</td><td>13%</td><td>13%</td><td>10%</td><td>9%</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="thir-0">
+                                <thead>
+                                    <tr><th>年度检查总量</th><th>临河区占比</th><th>五原县占比</th><th>磴口县占比</th><th>杭锦后旗占比</th><th>乌拉特前旗占比</th><th>乌拉特中旗占比</th><th>乌拉特后旗占比</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="yellow">123,421</td><td>18%</td><td>8%</td><td>9%</td><td>13%</td><td>13%</td><td>10%</td><td>9%</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="thir-1">
+                                <thead>
+                                    <tr><th>年度案件总量</th><th>临河区占比</th><th>五原县占比</th><th>磴口县占比</th><th>杭锦后旗占比</th><th>乌拉特前旗占比</th><th>乌拉特中旗占比</th><th>乌拉特后旗占比</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="yellow">123,421</td><td>18%</td><td>8%</td><td>9%</td><td>13%</td><td>13%</td><td>10%</td><td>9%</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="thir-2">
+                                <thead>
+                                    <tr><th>广告类检查总量</th><th>临河区占比</th><th>五原县占比</th><th>磴口县占比</th><th>杭锦后旗占比</th><th>乌拉特前旗占比</th><th>乌拉特中旗占比</th><th>乌拉特后旗占比</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="yellow">123,421</td><td>18%</td><td>8%</td><td>9%</td><td>13%</td><td>13%</td><td>10%</td><td>9%</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="thir-3">
+                                <thead>
+                                    <tr><th>商标类检查总量</th><th>临河区占比</th><th>五原县占比</th><th>磴口县占比</th><th>杭锦后旗占比</th><th>乌拉特前旗占比</th><th>乌拉特中旗占比</th><th>乌拉特后旗占比</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="yellow">123,421</td><td>18%</td><td>8%</td><td>9%</td><td>13%</td><td>13%</td><td>10%</td><td>9%</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="fourth-0">
+                                <thead>
+                                    <tr><th>商标申请总量</th><th>临河区占比</th><th>五原县占比</th><th>磴口县占比</th><th>杭锦后旗占比</th><th>乌拉特前旗占比</th><th>乌拉特中旗占比</th><th>乌拉特后旗占比</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="yellow">123,421</td><td>18%</td><td>8%</td><td>9%</td><td>13%</td><td>13%</td><td>10%</td><td>9%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- <div class="middle-content2"></div>
+                    <div class="middle-content3"></div>
+                    <div class="middle-content4"></div> -->
+                </div>
+            </div>
+            <div class="byneBigscreen-rgt">
+                <div class="title">
+                    <span class="stress">【线下投诉&举报】</span><span>单位：个</span>
+                </div>
+                <div class="rgt-content rgt-content1">
+                    <ul class="rgt-content1-title">
+                        <li class="">
+                            <i></i>
+                            <p>
+                                <span class="stress">18,743</span>
+                                <span>食药监业务受理(个)</span>
+                            </p>
+                            <p class="line"></p>
+                        </li>
+                        <li class="">
+                            <i></i>
+                            <p>
+                                <span class="stress">2,328</span>
+                                <span>工商业务受理(个)</span>
+                            </p>
+                            <p class="line"></p>
+                        </li>
+                        <li class="">
+                            <i></i>
+                            <p>
+                                <span class="stress">35,982</span>
+                                <span>质检业务受理(个)</span>
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="tsjb-bg">
+                        <div class="tsjb-lft">
+                            <div>
+                                <p><i></i>投诉数量：<span class="yellow">4,3421个</span></p>
+                            </div>
+                            <div>
+                                <p>办结率</p>
+                                <p class="stress">98%</p>
+                            </div>
+                        </div>
+                        <div class="tsjb-rgt">
+                            <div>
+                                <p><i></i>举报数量：<span class="yellow">8,421个</span></p>
+                            </div>
+                            <div>
+                                <p>办结率</p>
+                                <p class="stress">98%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rgt-con-wrapper">
+                        <div class="rgt-con rgt-con1">
+                            <div class="title">
+                                <span class="stress">【旗县投诉/举报量统计】</span><span>单位：个</span>
+                            </div>
+                            <div class="table-wrapper1">
+                                <table>
+                                    <thead>
+                                        <tr><th>旗县</th><th>投诉量</th><th>占比</th><th>办结率</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>临河区</td><td>867个</td><td>12%</td><td>92%</td></tr>
+                                        <tr><td>五原县</td><td>867个</td><td>12%</td><td>92%</td></tr>
+                                        <tr><td>磴口县</td><td>867个</td><td>12%</td><td>92%</td></tr>
+                                        <tr><td>杭锦后旗</td><td>867个</td><td>12%</td><td>92%</td></tr>
+                                        <tr><td>乌拉特前旗</td><td>867个</td><td>12%</td><td>92%</td></tr>
+                                        <tr><td>乌拉特中旗</td><td>867个</td><td>12%</td><td>92%</td></tr>
+                                        <tr><td>乌拉特后旗</td><td>867个</td><td>12%</td><td>92%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="rgt-con rgt-con2">
+                            <div class="title">
+                                <span class="stress">【投诉&举报客体前10】</span>
+                                <span class="rgb-con-tab rgb-con-tabs">商品</span>
+                                <span class="rgb-con-tab">服务</span>
+                            </div>
+                            <div class="table-wrapper2">
+                                <table>
+                                    <thead>
+                                        <tr><th>排名</th><th>客体类型</th><th>投诉&举报量</th><th>办结率</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>化妆品</td><td>861个</td><td>92%</td></tr>
+                                        <tr><td>2</td><td>儿童用品</td><td>862个</td><td>92%</td></tr>
+                                        <tr><td>3</td><td>装修建材</td><td>863个</td><td>92%</td></tr>
+                                        <tr><td>4</td><td>交通工具</td><td>864个</td><td>92%</td></tr>
+                                        <tr><td>5</td><td>农资用品</td><td>865个</td><td>92%</td></tr>
+                                        <tr><td>6</td><td>家用电器</td><td>866个</td><td>92%</td></tr>
+                                        <tr><td>7</td><td>首饰</td><td>867个</td><td>92%</td></tr>
+                                        <tr><td>8</td><td>照摄像产品</td><td>868个</td><td>92%</td></tr>
+                                        <tr><td>9</td><td>出版物</td><td>869个</td><td>92%</td></tr>
+                                        <tr><td>10</td><td>五金交电</td><td>867个</td><td>92%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-wrapper2" style="display: none;">
+                                <table>
+                                    <thead>
+                                        <tr><th>排名</th><th>客体类型</th><th>投诉&举报量</th><th>办结率</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>餐饮和住宿服务</td><td>861个</td><td>92%</td></tr>
+                                        <tr><td>2</td><td>旅游服务</td><td>862个</td><td>92%</td></tr>
+                                        <tr><td>3</td><td>电信服务</td><td>863个</td><td>92%</td></tr>
+                                        <tr><td>4</td><td>物业服务</td><td>864个</td><td>92%</td></tr>
+                                        <tr><td>5</td><td>社会福利</td><td>865个</td><td>92%</td></tr>
+                                        <tr><td>6</td><td>租赁服务</td><td>866个</td><td>92%</td></tr>
+                                        <tr><td>7</td><td>社会服务</td><td>867个</td><td>92%</td></tr>
+                                        <tr><td>8</td><td>公共事业服务</td><td>868个</td><td>92%</td></tr>
+                                        <tr><td>9</td><td>金融服务</td><td>869个</td><td>92%</td></tr>
+                                        <tr><td>10</td><td>销售服务</td><td>867个</td><td>92%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title">
+                    <span class="stress">【虚假广告】</span><span>单位：个</span>
+                </div>
+                <div class="rgt-content rgt-content2">
+                    <div class="tsjb-bg">
+                        <div class="tsjb-lft">
+                            <div>
+                                <p>采集总量：<span class="yellow">7428个</span></p>
+                            </div>
+                        </div>
+                        <div class="tsjb-rgt">
+                            <div>
+                                <p>研判数量：<span class="yellow">8421个</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="rgt-content1-title">
+                        <li class="">
+                            <i></i>
+                            <p>
+                                <span class="stress">4,743</span>
+                                <span>违法广告（个）</span>
+                            </p>
+                            <p class="line"></p>
+                        </li>
+                        <li class="">
+                            <i></i>
+                            <p>
+                                <span class="stress">332</span>
+                                <span>严重违法广告（个）</span>
+                            </p>
+                            <p class="line"></p>
+                        </li>
+                        <li class="">
+                            <i></i>
+                            <p>
+                                <span class="stress">2,389</span>
+                                <span>其他广告（个）</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<!--[if lt IE 9]>
+<script>
+    document.createElement('video');
+</script>
+<![endif]-->
+<script>
+    //video
+    $("#bgvid").get(0).addEventListener("ended",function(){
+        $('#bgvid').hide();
+        $('.box').show();
+    },false);
+
+    var dom = document.getElementById("lft-content2");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    app.title = '坐标轴刻度与标签对齐';
+
+    option = {
+        color: ['#4254C0'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'line'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            top: '4%',
+            left: '3%',
+            right: '0',
+            bottom: '0',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                axisLabel: {
+                    interval:0,
+                    rotate:"0",
+                    show: true,
+                    textStyle: {
+                        color: '#82E9FC'
+                    }
+                },
+                data : ['临河区', '五原县', '磴口县', '杭锦后旗', '乌拉特前旗', '乌拉特中旗', '乌拉特后旗'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis: {
+            axisTick : {show: false},//去掉刻度
+            splitLine:{      //去掉背景水平网格线
+                show:false
+            },
+            min:0,
+            max:50,
+            axisLabel:{
+                textStyle: {
+                    color: '#82E9FC'
+                },
+               // 自定义y轴刻度信息
+                formatter: function (value) {
+                    var texts = [];
+                    if(value==0){
+                        texts.push('0');
+                    }
+                    else if(value==10){
+                        texts.push('10k');
+                    }
+                    else if (value ==20) {
+                        texts.push('20k');
+                    }
+                    else if (value == 30) {
+                        texts.push('30k');
+                    }
+                    else if(value == 40){
+                        texts.push('40k');
+                    }
+                    else{
+                        texts.push('50k');
+                    }
+                    return texts;
+                }
+                }
+        },
+        series : [
+            {
+                type:'bar',
+                barWidth: '30%',
+                data:[48,22,35,12,39,27,28]
+            }
+        ]
+    };
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+</script>
+</body>
+</html>
