@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巴彦淖尔数据监测中心</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        video#bgvid{
+            position: fixed;
+            right: 0; bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background: url("./img/video.jpg") no-repeat;
+            background-size: cover;
+        }
+        .jump{
+            position: fixed;
+            top: 22px;
+            right: 21px;
+            z-index: 200;
+            height: 33px;
+            width: 96px;
+            line-height: 33px;
+            background: url("img/jump_01.png") no-repeat;
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+            color: #2BB8F1;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .jump_choose{
+            background: url("img/jump_02.png") no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <!--启动页-->
+    <video poster="./img/video.jpg" id="bgvid"  autoplay muted>
+        <source src="./img/video.mp4" type="video/mp4">
+    </video>
+
+    <div class="jump">跳过动画</div>
+
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script>
+    //video
+    $("#bgvid").get(0).addEventListener("ended",function(){
+        window.location.href= './bigScreen.html'
+    },false);
+
+    $('.jump').click(function () {
+        $('.jump').addClass('jump_choose');
+        window.location.href = './bigScreen.html';
+    });
+</script>
+</body>
+</html>

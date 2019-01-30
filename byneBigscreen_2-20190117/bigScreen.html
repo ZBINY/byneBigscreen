@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巴彦淖尔数据监测中心</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./dist/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/vwrem.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/flipTop.css">
+</head>
+<body>
+<!--大屏内容-->
+<div class="bg">
+    <div class='swiper-top'>
+        <div class='qiHuan' data-index='0' data-xunClass='xuan'>主体数据分析</div>
+        <div class='qiHuan' data-index='1' data-xunClass='xuan'>业务数据分析</div>
+        <div class='qiHuan' data-index='2' data-xunClass='xuan'>天赋河套</div>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper" data-activeIndex='0'>
+            <!--主体数据分析-->
+            <div class="swiper-slide">
+                <div class="lft">
+                    <div class="lft_1">
+                        <h3>历年主体增长率</h3>
+                        <div id="chart-con1"></div>
+                    </div>
+                    <div class="lft_2">
+                        <h3>2019年主体增长趋势</h3>
+                        <div id="chart-con2"></div>
+                    </div>
+                    <div class="lft_3">
+                        <h3>网络交易分析</h3>
+                        <div id="chart-con3"></div>
+                        <div class="lft_3-msg">
+                            <h4>企业销售额贡献</h4>
+                            <p><span>商品名1</span><span class="rate1"></span><span>16家</span></p>
+                            <p><span>商品名2</span><span class="rate2"></span><span>9家</span></p>
+                            <p><span>商品名3</span><span class="rate3"></span><span>22家</span></p>
+                            <p><span>商品名4</span><span class="rate4"></span><span>28家</span></p>
+                            <p><span>商品名5</span><span class="rate5"></span><span>4家</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="middle">
+                    <div class="middle_1">
+                        <div class="msg-wrapper">
+                            <ul class="msg">
+                                <li><i class="icon"></i>主体实时总量</li>
+                                <li>
+                                    <div class="dataStatistics dataStatistics0">
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set set_last"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="msg-wrapper">
+                            <i class="icon_up"></i>
+                            <ul class="msg">
+                                <li><i class="icon"></i>线下企业数量</li>
+                                <!--<li><span class="big">10,013</span>家</li>-->
+                                <li>
+                                    <div class="dataStatistics dataStatistics1">
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set set_last"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="msg-wrapper">
+                            <i class="icon_up"></i>
+                            <ul class="msg">
+                                <li><i class="icon"></i>线上企业数量</li>
+                                <!--<li><span class="big">8,730</span>家</li>-->
+                                <li>
+                                    <div class="dataStatistics dataStatistics2">
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set"></div>
+                                        <div class="digit_set set_last"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="middle_2">
+                        <!--<ul>-->
+                            <!--<li class="city"></li>-->
+                            <!--<li class="xx"><i></i></li>-->
+                            <!--<li class="xs"><i></i></li>-->
+                        <!--</ul>-->
+                    </div>
+                    <div class="middle_3">
+                        <h3>旗县主体分布</h3>
+                        <div id="chart-con7"></div>
+                    </div>
+                </div>
+
+                <div class="rgt">
+                    <div class="rgt_1">
+                        <h3>第一二三产业占比情况</h3>
+                        <div id="chart-con4"></div>
+                        <div id="chart-con4_1"></div>
+                        <div class="msg"><span>个体</span><span>企业</span></div>
+                    </div>
+                    <div class="rgt_2">
+                        <h3>快递业务量情况图</h3>
+                        <div id="chart-con5"></div>
+                    </div>
+                    <div class="rgt_3">
+                        <h3>分专业快递业务量比较图</h3>
+                        <div id="chart-con6"></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!--业务数据分析-->
+            <div class="swiper-slide">
+                <div class="top">
+                    <div class="top_1">
+                        <h3>直销会议完成情况</h3>
+                        <p class="msg"><span>申请总量：</span><span><span class="big total">712</span>个</span><span>审批通过：</span><span><span class="big total">312</span>个</span></p>
+                        <div id="chart-top1"></div>
+                    </div>
+                    <div class="top_2">
+                        <h3>案件类型占比</h3>
+                        <p class="msg"><span>申请总量：</span><span><span class="big total">712</span>个</span><span>审批通过：</span><span><span class="big total">312</span>个</span></p>
+                        <div id="chart-top2"></div>
+                    </div>
+                    <div class="top_3">
+                        <h3>电子标识完成情况</h3>
+                        <p class="msg"><span>申请总量：</span><span><span class="big total">712</span>个</span><span>审批通过：</span><span><span class="big total">312</span>个</span></p>
+                        <div id="chart-top3"></div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="bottom_1">
+                        <h3>2018年抽检任务不合格商品发现率</h3>
+                        <p class="msg"><span>抽检任务总量：：</span><span><span class="big total">712</span>个</span></p>
+                        <div id="chart-bottom1"></div>
+                    </div>
+                    <div class="bottom_2">
+                        <h3>投诉举报统计分析</h3>
+                        <p class="msg"><span>投诉举报总量：</span><span><span class="big total">18,743</span>个</span><span>办结率：</span><span><span class="big total">98.96%</span></span></p>
+                        <div class="bottom2_lft bottom2_Msgwrapper">
+                            <h4>商品类投诉举报前10 </h4>
+                            <p class="msg"><span>商品类总量：</span><span><span class="total">4,421</span>个</span><span>办结率：</span><span><span class="total">98.47%</span></span></p>
+                            <div class="table-wrapper1 table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr><th>排名</th><th>客体类型</th><th>投诉&举报量</th><th>办结率</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>化妆品</td><td>861个</td><td>92%</td></tr>
+                                        <tr><td>2</td><td>儿童用品</td><td>862个</td><td>92%</td></tr>
+                                        <tr><td>3</td><td>装修建材</td><td>863个</td><td>92%</td></tr>
+                                        <tr><td>4</td><td>交通工具</td><td>864个</td><td>92%</td></tr>
+                                        <tr><td>5</td><td>农资用品</td><td>865个</td><td>92%</td></tr>
+                                        <tr><td>6</td><td>家用电器</td><td>866个</td><td>92%</td></tr>
+                                        <tr><td>7</td><td>首饰</td><td>867个</td><td>92%</td></tr>
+                                        <tr><td>8</td><td>照摄像产品</td><td>868个</td><td>92%</td></tr>
+                                        <tr><td>9</td><td>出版物</td><td>869个</td><td>92%</td></tr>
+                                        <tr><td>10</td><td>五金交电</td><td>867个</td><td>92%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="bottom2_rgt bottom2_Msgwrapper">
+                            <h4>商品类投诉举报前10 </h4>
+                            <p class="msg"><span>商品类总量：</span><span><span class="total">4,421</span>个</span><span>办结率：</span><span><span class="total">98.47%</span></span></p>
+                            <div class="table-wrapper2 table-wrapper">
+                                <table>
+                                    <thead>
+                                    <tr><th>排名</th><th>客体类型</th><th>投诉&举报量</th><th>办结率</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>化妆品</td><td>861个</td><td>92%</td></tr>
+                                        <tr><td>2</td><td>儿童用品</td><td>862个</td><td>92%</td></tr>
+                                        <tr><td>3</td><td>装修建材</td><td>863个</td><td>92%</td></tr>
+                                        <tr><td>4</td><td>交通工具</td><td>864个</td><td>92%</td></tr>
+                                        <tr><td>5</td><td>农资用品</td><td>865个</td><td>92%</td></tr>
+                                        <tr><td>6</td><td>家用电器</td><td>866个</td><td>92%</td></tr>
+                                        <tr><td>7</td><td>首饰</td><td>867个</td><td>92%</td></tr>
+                                        <tr><td>8</td><td>照摄像产品</td><td>868个</td><td>92%</td></tr>
+                                        <tr><td>9</td><td>出版物</td><td>869个</td><td>92%</td></tr>
+                                        <tr><td>10</td><td>五金交电</td><td>867个</td><td>92%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--天赋河套-->
+            <div class="swiper-slide">
+                <div class="lft">
+                    <div class="lft_1">
+                        <div class="title">
+                            <h3>恒丰食品工业（集团）股份有限公司</h3>
+                            <!--<div class="nav">-->
+                                <!--<p class="choose">恒丰雪花粉</p>-->
+                                <!--<p>恒丰手拉面</p>-->
+                            <!--</div>-->
+                            <select name="" class="nav">
+                                <option value="恒丰雪花粉" class="option">恒丰雪花粉</option>
+                                <option value="恒丰手拉面">恒丰手拉面</option>
+                            </select>
+                        </div>
+                        <div id="lft_chart_11" class="swiper3_echart"></div>
+                        <div id="lft_chart_12" class="swiper3_echart" style="display: none"></div>
+                    </div>
+                    <div class="lft_2">
+                        <div class="title">
+                            <h3>内蒙古兆丰河套面业有限公司</h3>
+                            <!--<div class="nav">-->
+                                <!--<p class="choose">兆丰有机特制颗粒粉</p>-->
+                                <!--<p>兆丰有机雪花粉</p>-->
+                            <!--</div>-->
+                            <select name="" class="nav">
+                                <option value="兆丰有机特制颗粒粉" class="option">兆丰有机特制颗粒粉</option>
+                                <option value="兆丰有机雪花粉">兆丰有机雪花粉</option>
+                            </select>
+                        </div>
+                        <div id="lft_chart_21" class="swiper3_echart"></div>
+                        <div id="lft_chart_22" class="swiper3_echart" style="display: none"></div>
+                    </div>
+                    <div class="lft_3">
+                        <div class="title">
+                            <h3>内蒙古圣牧高科牧业有限公司</h3>
+                            <!--<div class="nav">-->
+                                <!--<p class="choose">圣牧有机牛奶</p>-->
+                                <!--<p>圣牧有机酸奶</p>-->
+                            <!--</div>-->
+                            <select name="" class="nav">
+                                <option value="圣牧有机牛奶" class="option">圣牧有机牛奶</option>
+                                <option value="圣牧有机酸奶">圣牧有机酸奶</option>
+                            </select>
+                        </div>
+                        <div id="lft_chart_31" class="swiper3_echart"></div>
+                        <div id="lft_chart_32" class="swiper3_echart" style="display: none"></div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="logo"></div>
+                    <div class="msg">首批授权使用“天赋河套”<br/>农产品区域公共品牌的6家企业和产品</div>
+                    <div class="total">
+                        <p class="name">商品总销量（个）</p>
+                        <p class="num">3,421</p>
+                    </div>
+                    <div class="total">
+                        <p class="name">产生销售额（元）</p>
+                        <p class="num">12,981</p>
+                    </div>
+                </div>
+                <div class="rgt">
+                    <div class="rgt_1">
+                        <div class="title">
+                            <h3>内蒙古旭一牧业有限公司</h3>
+                            <!--<div class="nav">-->
+                                <!--<p class="choose">旭一安格斯有机牛肉</p>-->
+                            <!--</div>-->
+                            <select name="" class="nav">
+                                <option value="旭一安格斯有机牛肉" class="option">旭一安格斯有机牛肉</option>
+                            </select>
+                        </div>
+
+                        <div id="rgt_chart_11" class="swiper3_echart"></div>
+                    </div>
+                    <div class="rgt_2">
+                        <div class="title">
+                            <h3>巴彦淖尔市三胖蛋食品有限公司</h3>
+                            <!--<div class="nav">-->
+                                <!--<p class="choose">三胖蛋原味瓜子</p>-->
+                            <!--</div>-->
+                            <select name="" class="nav">
+                                <option value="三胖蛋原味瓜子" class="option">三胖蛋原味瓜子</option>
+                            </select>
+                        </div>
+                        <div id="rgt_chart_21" class="swiper3_echart"></div>
+                    </div>
+                    <div class="rgt_3">
+                        <div class="title">
+                            <h3>内蒙古河套酒业集团股份有限公司</h3>
+                            <!--<div class="nav">-->
+                                <!--<p class="choose">河套王酒52度</p>-->
+                                <!--<p>河套王酒36度</p>-->
+                            <!--</div>-->
+                            <select name="" class="nav">
+                                <option value="河套王酒52度" class="option">河套王酒52度</option>
+                                <option value="河套王酒36度">河套王酒36度</option>
+                            </select>
+                        </div>
+                        <div id="rgt_chart_31" class="swiper3_echart"></div>
+                        <div id="rgt_chart_32" class="swiper3_echart" style="display: none"></div>
+                    </div>
+                </div>
+                <div class="bg_img"></div>
+            </div>
+        </div>
+    </div>
+</div >
+
+
+<script src="./js/jquery-3.1.1.min.js"></script>
+<!--<script src="./js/rem.js"></script>-->
+<script src="./dist/js/swiper.min.js"></script>
+<script src="dist/js/xsw_js.js"></script>
+<script src="dist/js/jquery.dataStatistics.js"></script>
+<script src="./js/echarts.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/data.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.dataStatistics0').dataStatistics({min:106360,max:106360,time:0,len:6});
+        $('.dataStatistics1').dataStatistics({min:106322,max:106322,time:0,len:6});
+        $('.dataStatistics2').dataStatistics({min:38,max:38,time:0,len:6});
+    });
+</script>
+</body>
+</html>

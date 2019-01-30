@@ -1,0 +1,983 @@
+@mixin flex{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+@mixin center{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin echarts_title{
+  color: #ffffff;
+  font-size: pxTorem(16px);
+  font-weight: 600;
+  text-align: center;
+  line-height: pxTorem(40px);
+}
+
+@function pxTorem($px){//$px为需要转换的字号
+  @return $px / 100px * 1rem;
+}
+
+$norepat: 0 0 no-repeat/100% 100%;
+
+html,body{
+  height: 100%;
+}
+i{
+  display: inline-block;
+}
+
+.bg{
+  width: 100%;
+  /*height: 100%;*/
+  background: url("../img/bg.jpg") 0 0 no-repeat/100% 100%;
+  .swiper-top{
+    @include flex;
+    float: right;
+    margin-top: pxTorem(8px);
+    margin-bottom: pxTorem(9px);
+    color: #DEDEDE;
+    font-size: pxTorem(14px);
+    .qiHuan{
+      line-height: pxTorem(34px);
+      text-align: center;
+      width: pxTorem(131px);
+      background: url("../img/btn_out.png") $norepat;
+      &:last-child{
+        margin-right: pxTorem(12px);
+      }
+    }
+    .xuan{
+      color: #ffffff;
+      background: url("../img/btn_on.png") $norepat;
+    }
+  }
+  .swiper-container {
+    /*padding: pxTorem(15px) pxTorem(10px) pxTorem(15px) pxTorem(10px);*/
+    padding-top: pxTorem(15px);
+    width: 100%;
+    //height:calc(100% - 2.25rem);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .swiper-slide:nth-child(1){
+      @include flex;
+      justify-content: space-around;
+      .lft{
+        @include flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .lft_1{
+          width: pxTorem(388px);
+          height: pxTorem(189px);
+          background: url("../img/left-01.png") $norepat;
+          h3{
+            @include echarts_title;
+          }
+          #chart-con1{
+            margin: 0 auto;
+            //width: pxTorem(360px);
+            //height: pxTorem(140px);
+            width: 360px;
+            height: 140px;
+            cursor: pointer;
+          }
+        }
+        .lft_2{
+          width: pxTorem(388px);
+          height: pxTorem(232px);
+          background: url("../img/left-02.png") $norepat;
+          h3{
+            @include echarts_title;
+          }
+          #chart-con2{
+            margin: 0 auto;
+            //width: pxTorem(360px);
+            //height: pxTorem(180px);
+            width: 360px;
+            height:180px;
+            cursor: pointer;
+          }
+        }
+        .lft_3{
+          position: relative;
+          top: 0;
+          right: 0;
+          width: pxTorem(388px);
+          height: pxTorem(256px);
+          background: url("../img/left-01.png") $norepat;
+          h3{
+            @include echarts_title;
+          }
+          #chart-con3{
+            margin: 0 auto;
+            //width: pxTorem(360px);
+            //height: pxTorem(210px);
+            width: 360px;
+            height: 210px;
+            cursor: pointer;
+          }
+          .lft_3-msg{
+            position: absolute;
+            top: pxTorem(81px);
+            right: pxTorem(20px);
+            color: #DEDEDE;
+            font-size: pxTorem(10px);
+            h4{
+              margin-bottom: pxTorem(11px);
+              color: #ffffff;
+              font-size: pxTorem(14px);
+            }
+            p{
+              margin-bottom: pxTorem(13px);
+              span:first-child{
+                margin-right: pxTorem(8px);
+              }
+              span:nth-child(2){
+                margin-right: pxTorem(3px);
+                display: inline-block;
+                height: pxTorem(13px);
+              }
+              .rate1{
+                width:pxTorem(37px);
+                background: #288BE0;
+              }
+              .rate2{
+                width:pxTorem(27px);
+                background: #EBF583;
+              }
+              .rate3{
+                width:pxTorem(47px);
+                background: #19D78B;
+              }
+              .rate4{
+                width:pxTorem(67px);
+                background: #E6517F;
+              }
+              .rate5{
+                width:pxTorem(27px);
+                background: #9629DC;
+              }
+            }
+          }
+        }
+      }
+      .middle{
+        @include flex;
+        align-items: center;
+        flex-direction: column;
+        .middle_1{
+          @include flex;
+          .msg-wrapper{
+            @include flex;
+            align-items: center;
+            margin-right: pxTorem(12px);
+            width: pxTorem(160px);
+            height: pxTorem(74px);
+            background: url("../img/qyzlbg01.png") $norepat;
+            i{
+              margin-left: pxTorem(15px);
+              margin-right: pxTorem(16px);
+            }
+            .icon_up{
+              position: absolute;
+              top: pxTorem(6px);
+              margin: 0;
+              right: pxTorem(6px);
+              width: pxTorem(11px);
+              height: pxTorem(11px);
+              background: url("../img/icon_up.png") $norepat;
+            }
+            .msg{
+              color: #ffffff;
+              font-size: pxTorem(12px);
+              //text-align: center;
+              li:nth-child(2){
+                margin-left: pxTorem(10px);
+                margin-top: pxTorem(5px);
+              }
+              .big{
+                display: inline-block;
+                margin-top: pxTorem(10px);
+                margin-right: pxTorem(5px);
+                font-size: pxTorem(20px);
+              }
+            }
+          }
+          .msg-wrapper:nth-child(1){
+            .icon{
+              margin-right: pxTorem(19px);
+              width: pxTorem(18px);
+              height: pxTorem(18px);
+              background: url("../img/total.png") $norepat;
+            }
+          }
+          .msg-wrapper:nth-child(2){
+            position: relative;
+            cursor: pointer;
+            .icon{
+              width: pxTorem(18px);
+              height: pxTorem(18px);
+              background: url("../img/xxqy.png") $norepat;
+            }
+          }
+          .msg-wrapper:nth-child(3){
+            position: relative;
+            cursor: pointer;
+            .icon{
+              width: pxTorem(21px);
+              height: pxTorem(18px);
+              background: url("../img/xsqy.png") $norepat;
+            }
+          }
+        }
+        .middle_2{
+          position: relative;
+          margin-top: pxTorem(28px);
+          width: pxTorem(559px);
+          height: pxTorem(376px);
+          background: url("../img/map.png") $norepat;
+          ul{
+            position: absolute;
+            cursor: pointer;
+            .city {
+              margin-bottom: pxTorem(4px);
+              color: #9FD9F0;
+              font-size: pxTorem(12px);
+            }
+            .xx{
+              margin-bottom: pxTorem(5px);
+              color: #ffffff;
+              font-size: pxTorem(14px);
+              i{
+                margin-right: pxTorem(6px);
+                width: pxTorem(12px);
+                height: pxTorem(12px);
+                background: url("../img/xxqy_small.png") $norepat;
+              }
+            }
+            .xs{
+              color: #ffffff;
+              font-size: pxTorem(14px);
+              i{
+                margin-right: pxTorem(4px);
+                width: pxTorem(14px);
+                height: pxTorem(12px);
+                background: url("../img/xsqy_small.png") $norepat;
+              }
+            }
+          }
+          ul:nth-child(1) {
+            top: pxTorem(209px);
+            left: pxTorem(242px);
+          }
+          ul:nth-child(2) {
+            top: pxTorem(201px);
+            left: pxTorem(311px);
+          }
+          ul:nth-child(3) {
+            top: pxTorem(284px);
+            left: pxTorem(151px);
+          }
+          ul:nth-child(4) {
+            top: pxTorem(222px);
+            left: pxTorem(172px);
+          }
+          ul:nth-child(5) {
+            top: pxTorem(226px);
+            right: pxTorem(58px);
+          }
+          ul:nth-child(6) {
+            top: pxTorem(71px);
+            left: pxTorem(351px);
+          }
+          ul:nth-child(7) {
+            top: pxTorem(101px);
+            left: pxTorem(115px);
+          }
+        }
+        .middle_3{
+          margin-top: pxTorem(21px);
+          h3{
+            @include echarts_title;
+          }
+          #chart-con7{
+            margin: 0 auto;
+            //width: pxTorem(490px);
+            //height: pxTorem(155px);
+            width: 490px;
+            height: 146px;
+          }
+        }
+      }
+      .rgt{
+        @include flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .rgt_1{
+          width: pxTorem(388px);
+          height: pxTorem(195px);
+          background: url("../img/right-01.png") $norepat;
+          h3{
+            @include echarts_title;
+          }
+          #chart-con4{
+            float: left;
+            margin-left: pxTorem(5px);
+            //width: pxTorem(185px);
+            //height: pxTorem(135px);
+            width: 185px;
+            height: 135px;
+            cursor: pointer;
+          }
+          #chart-con4_1{
+            float: left;
+            margin-left: pxTorem(5px);
+            //width: pxTorem(185px);
+            //height: pxTorem(135px);
+            width: 185px;
+            height: 135px;
+            cursor: pointer;
+          }
+          .msg{
+            font-size: pxTorem(14px);
+            span{
+              display: inline-block;
+              width: 50%;
+              text-align: center;
+              line-height: pxTorem(22px);
+            }
+            span:nth-child(1){
+              color: #36C9FF;
+            }
+            span:nth-child(2){
+              color: #26CC89;
+            }
+          }
+        }
+        .rgt_2{
+          width: pxTorem(388px);
+          height: pxTorem(266px);
+          background: url("../img/right-02.png") $norepat;
+          h3{
+            @include echarts_title;
+          }
+          #chart-con5{
+            margin: 0 auto;
+            //width: pxTorem(350px);
+            //height: pxTorem(202px);
+            width: 350px;
+            height: 202px;
+          }
+        }
+        .rgt_3{
+          width: pxTorem(388px);
+          height: pxTorem(237px);
+          background: url("../img/right-01.png") $norepat;
+          h3{
+            @include echarts_title;
+          }
+          #chart-con6{
+            margin: 0 auto;
+            //width: pxTorem(350px);
+            //height: pxTorem(180px);
+            width: 350px;
+            height: 180px;
+          }
+        }
+      }
+    }
+    .swiper-slide:nth-child(2){
+      .top{
+        @include flex;
+        justify-content: space-between;
+        .top_1,.top_2,.top_3{
+          margin-right: pxTorem(10px);
+          width: pxTorem(442px);
+          height: pxTorem(321px);
+          background: url("../img/02/left-top.png") $norepat;
+          .msg{
+            color: #DEDEDE;
+            font-size: pxTorem(12px);
+            text-align: center;
+            .big{
+              display: inline-block;
+              margin-right: pxTorem(7px);
+              margin-bottom: pxTorem(15px);
+              color: #FFFFFF;
+              font-size: pxTorem(20px);
+            }
+            span:nth-child(2){
+              margin-right: pxTorem(11px);
+            }
+          }
+        }
+        .top_1{
+          margin-left: pxTorem(10px);
+          h3{
+            @include echarts_title;
+          }
+          #chart-top1{
+            margin: 0 auto;
+            //width: pxTorem(432px);
+            //height: pxTorem(215px);
+            width: 432px;
+            height: 215px;
+          }
+        }
+        .top_2{
+          h3{
+            @include echarts_title;
+          }
+          #chart-top2{
+            margin: 0 auto;
+            //width: pxTorem(432px);
+            //height: pxTorem(215px);
+            width: 432px;
+            height: 215px;
+          }
+        }
+        .top_3{
+          h3{
+            @include echarts_title;
+          }
+          #chart-top3{
+            margin: 0 auto;
+            //width: pxTorem(432px);
+            //height: pxTorem(215px);
+            width: 432px;
+            height: 215px;
+          }
+        }
+      }
+      .bottom{
+        @include flex;
+        justify-content: space-between;
+        margin-top:pxTorem(8px);
+        .msg{
+          color: #DEDEDE;
+          font-size: pxTorem(12px);
+          text-align: center;
+          .big{
+            display: inline-block;
+            margin-right: pxTorem(7px);
+            margin-bottom: pxTorem(15px);
+            color: #FFFFFF;
+            font-size: pxTorem(20px);
+          }
+          span:nth-child(2){
+            margin-right: pxTorem(11px);
+          }
+        }
+        .bottom_1{
+          margin-left: pxTorem(10px);
+          width: pxTorem(717px);
+          height: pxTorem(370px);
+          background: url("../img/02/left-bottom.png") $norepat;
+          h3{
+            @include echarts_title;
+          }
+          #chart-bottom1{
+            margin: 0 auto;
+            //width: pxTorem(700px);
+            width: 700px;
+            height: 267px;
+          }
+        }
+        .bottom_2{
+          margin-right: pxTorem(10px);
+          width: pxTorem(619px);
+          height: pxTorem(370px);
+          background: url("../img/02/right-bottom.png") $norepat;
+          overflow: hidden;
+          h3{
+            @include echarts_title;
+          }
+          .bottom2_Msgwrapper{
+            h4{
+              color: #fff;
+              font-size: pxTorem(14px);
+              margin-top: pxTorem(11px);
+              padding-left: pxTorem(10px);
+              margin-bottom: pxTorem(19px);
+            }
+            .msg{
+              padding-left: pxTorem(10px);
+              margin-bottom: pxTorem(8px);
+              text-align: left;
+            }
+            .table-wrapper{
+              height: pxTorem(200px);
+              overflow: hidden;
+              color: #ffffff;
+              font-size: pxTorem(12px);
+              table{
+                width: pxTorem(294px);
+                text-align: left;
+                thead{
+                  color: #DEDEDE;
+                }
+                tr{
+                  line-height: pxTorem(30px);
+                  th:first-child{
+                    padding-left: pxTorem(17px);
+                  }
+                  td:first-child{
+                    padding-left: pxTorem(17px);
+                  }
+                }
+                tbody{
+                  tr:nth-child(odd){
+                    background: rgba(40,139,224,.2);
+                  }
+                }
+              }
+            }
+          }
+          .bottom2_lft{
+            float: left;
+            margin-left: pxTorem(10px);
+            width: pxTorem(294px);
+            height: pxTorem(268px);
+            background: url("../img/02/left_bg.png") $norepat;
+            .table-wrapper1{}
+          }
+          .bottom2_rgt{
+            float: left;
+            margin-left: pxTorem(10px);
+            width: pxTorem(294px);
+            height: pxTorem(268px);
+            background: url("../img/02/right_bg.png") $norepat;
+          }
+        }
+      }
+    }
+    .swiper-slide:nth-child(3){
+      @include flex;
+      justify-content: space-between;
+      .lft{
+        @include flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: pxTorem(10px);
+        .lft_1,.lft_2,.lft_3{
+          padding: pxTorem(12px) pxTorem(10px) pxTorem(11px) pxTorem(12px);
+          width: pxTorem(496px);
+          height: pxTorem(226px);
+          background: url("../img/03/bg_echart.png") $norepat;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          .title{
+            @include flex;
+            justify-content: space-between;
+            h3{
+              color: #fff;
+              font-size: pxTorem(14px);
+            }
+            /*.nav{
+              p{
+                float: left;
+                margin-right: pxTorem(5px);
+                padding: pxTorem(5px);
+                color: #999;
+                font-size: pxTorem(12px);
+                border:1px solid rgba(4,85,134,1);
+              }
+              p:last-child{
+                margin: 0;
+              }
+              .choose{
+                color: #fff;
+                border:1px solid rgba(43,184,241,1);
+              }
+            }*/
+            .nav{
+              width: pxTorem(127px);
+              height: pxTorem(19px);
+              color: #fff;
+              font-size: pxTorem(12px);
+              background: #132053;
+              border: 1px solid #2BB8F1;
+              outline: none;
+            }
+          }
+          .swiper3_echart{
+            //width: pxTorem(476px);
+            //height: pxTorem(190px);
+            width: 476px;
+            height: 190px;
+          }
+        }
+      }
+      .middle{
+        color: #ffffff;
+        .logo{
+          margin: pxTorem(47px) auto pxTorem(20px);
+          width: pxTorem(237px);
+          height: pxTorem(77px);
+          background: url("../img/03/logo.png") $norepat;
+        }
+        .msg{
+          font-size: pxTorem(12px);
+          line-height: pxTorem(40px);
+          text-align: center;
+        }
+        .total{
+          margin-top: pxTorem(20px);
+          .name{
+            text-align: center;
+            font-size: pxTorem(12px);
+          }
+          .num{
+            width: pxTorem(289px);
+            height: pxTorem(58px);
+            font-size: pxTorem(36px);
+            line-height: pxTorem(58px);
+            text-align: center;
+            background: url("../img/03/bg_num.png") $norepat;
+          }
+        }
+      }
+      .rgt{
+        @include flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: pxTorem(10px);
+        .rgt_1,.rgt_2,.rgt_3{
+          padding: pxTorem(12px) pxTorem(10px) pxTorem(11px) pxTorem(12px);
+          width: pxTorem(496px);
+          height: pxTorem(226px);
+          background: url("../img/03/bg_echart.png") $norepat;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          .title{
+            @include flex;
+            justify-content: space-between;
+            h3{
+              color: #fff;
+              font-size: pxTorem(14px);
+            }
+            /*.nav{
+              p{
+                float: left;
+                margin-right: pxTorem(5px);
+                padding: pxTorem(5px);
+                color: #999;
+                font-size: pxTorem(12px);
+                border:1px solid rgba(4,85,134,1);
+              }
+              p:last-child{
+                margin: 0;
+              }
+              .choose{
+                color: #fff;
+                border:1px solid rgba(43,184,241,1);
+              }
+            }*/
+            .nav{
+              width: pxTorem(127px);
+              height: pxTorem(19px);
+              color: #fff;
+              font-size: pxTorem(12px);
+              background: #132053;
+              border: 1px solid #2BB8F1;
+              outline: none;
+            }
+          }
+          .swiper3_echart{
+            //width: pxTorem(476px);
+            //height: pxTorem(196px);
+            width: 476px;
+            height: 196px;
+          }
+        }
+      }
+      .bg_img{
+        position: fixed;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        height: pxTorem(296px);
+        background:url("../img/03/bg_img.png") $norepat;
+      }
+    }
+  }
+}
+
+/*市场主体分析*/
+.sczt{
+  overflow: hidden;
+  .return_back{
+    float: right;
+    margin-top: pxTorem(8px);
+    margin-right: pxTorem(15px);
+    width: pxTorem(90px);
+    height: pxTorem(30px);
+    line-height: pxTorem(30px);
+    color: #fff;
+    font-size: pxTorem(14px);
+    text-align: center;
+    background: url("../img/btn_out.png") $norepat;
+    cursor: pointer;
+  }
+  .content{
+    margin-top: pxTorem(47px);
+    padding: pxTorem(10px) pxTorem(20px) pxTorem(0px);
+    .sec-head{
+      @include flex;
+      align-items: center;
+      .name{
+        color: #fff;
+        font-size: pxTorem(16px);
+      }
+      #years{
+        margin-left: pxTorem(10px);
+        width:pxTorem(87px);
+        height:pxTorem(24px);
+        color: #ffffff;
+        font-size: pxTorem(12px);
+        background:rgba(19,32,83,0);
+        border:1px solid rgba(43,184,241,1);
+        outline: none;
+        cursor: pointer;
+      }
+      .nav{
+        margin-left: pxTorem(180px);
+        @include flex;
+        cursor: pointer;
+        p{
+          width: pxTorem(148px);
+          height: pxTorem(34px);
+          color: #2BB8F1;
+          font-size: pxTorem(14px);
+          line-height: pxTorem(34px);
+          text-align: center;
+          background: url("../img/sczt/btn_out.png") $norepat;
+        }
+        p:nth-child(2){
+          width: pxTorem(182px);
+        }
+        .choose{
+          color: #ffffff;
+          background: url("../img/sczt/btn_on.png") $norepat;
+        }
+      }
+    }
+  }
+  .data-container{
+    .data-wrapper{
+      @include flex;
+      justify-content: space-between;
+      .data{
+        @include flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: pxTorem(30px);
+        margin-top: pxTorem(23px);
+        width: pxTorem(142px);
+        height: pxTorem(64px);
+        background: url("../img/sczt/data_out.png") $norepat;
+        color: #ffffff;
+        font-size: pxTorem(12px);
+        cursor: pointer;
+        .num{
+          margin-top:pxTorem(10px);
+          .big{
+            color: #98C6FF;
+            font-size: pxTorem(20px);
+          }
+        }
+      }
+      .choose{
+        background: url("../img/sczt/data_on.png") $norepat;
+      }
+    }
+    .echarts_wrapper{
+      margin-top: pxTorem(20px);
+      @include flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .echart{
+        margin-bottom: pxTorem(10px);
+        //width: pxTorem(428px);
+        //height: pxTorem(176px);
+        width: 428px;
+        height: 176px;
+        background: url("../img/sczt/bg_out.png") $norepat !important;
+      }
+      .choose{
+        background: url("../img/sczt/bg_on.png") $norepat !important;
+      }
+    }
+  }
+  .data-container1{
+    .big{
+      color: #55FEBA !important;
+    }
+    .echart{
+      //height: pxTorem(265px) !important;
+      height: 265px !important;
+    }
+  }
+}
+
+/*天赋河套*/
+.tfht{
+  overflow: hidden;
+  .return_back {
+    float: right;
+    margin-top: pxTorem(8px);
+    margin-right: pxTorem(15px);
+    width: pxTorem(90px);
+    height: pxTorem(30px);
+    line-height: pxTorem(30px);
+    color: #fff;
+    font-size: pxTorem(14px);
+    text-align: center;
+    background: url("../img/btn_out.png") $norepat;
+    cursor: pointer;
+  }
+  .content{
+    position: relative;
+    margin-top: pxTorem(47px);
+    padding: pxTorem(10px) pxTorem(20px) pxTorem(0px);
+    .title{
+      overflow: hidden;
+      color: #ffffff;
+      .typeName{
+        float: left;
+        margin-right:pxTorem(15px);
+        margin-left: pxTorem(20px);
+        font-size: pxTorem(16px);
+        line-height: pxTorem(26px);
+      }
+      #years{
+        float: left;
+        width:pxTorem(89px);
+        height:pxTorem(26px);
+        color: #fff;
+        background:rgba(19,32,83,0);
+        border:1px solid rgba(43,184,241,1);
+        outline: none;
+      }
+      .companyName{
+        float: right;
+        font-size: pxTorem(12px);
+        line-height: pxTorem(26px);
+      }
+    }
+    .dataContent-wrapper{
+      margin: pxTorem(7px) 0 pxTorem(9px);
+      color: #fff;
+      font-size: pxTorem(14px);
+      table{
+        width: 100%;
+        thead{
+          height: pxTorem(30px);
+          line-height: pxTorem(30px);
+          background: #242E53;
+          border: 1px solid #155C88;
+          text-align: left;
+          display:table;
+          width:99%;
+          table-layout:fixed;
+          tr{
+            th:first-child{
+              padding-left:pxTorem(15px) ;
+              width: pxTorem(100px);
+            }
+            th:nth-child(2){
+              width: 45%;
+            }
+            th:nth-child(5){
+              width: pxTorem(200px);
+            }
+          }
+        }
+        tbody{
+          display:block;
+          height:pxTorem(580px);
+          overflow-y:scroll;
+          tr{
+            line-height: pxTorem(43px);
+            border: 1px solid #155C88;
+            display:table;
+            width:99.4%;
+            table-layout:fixed;
+            td:first-child{
+              padding-left:pxTorem(15px) ;
+              width: pxTorem(100px);
+            }
+            td:nth-child(2){
+              width: 45%;
+            }
+            td:nth-child(5){
+              width: pxTorem(200px);
+            }
+          }
+          tr:nth-child(even){
+            background: #0A2442;
+          }
+        }
+      }
+    }
+    .page-wrapper{
+      position: fixed;
+      bottom: pxTorem(0px);
+      color: #fff;
+      width: 96%;
+      .paging{
+        float: left;
+        //height: pxTorem(20px);
+        .pagination{
+          border: none;
+          a{
+            margin-right: pxTorem(10px);
+            display: inline-block;
+            width:pxTorem(12px);
+            height: pxTorem(11px);
+          }
+          .first{
+            background: url("../img/03/left.png") $norepat;
+          }
+          .previous{
+            background: url("../img/03/lft.png") $norepat;
+          }
+          .next{
+            margin-left: pxTorem(10px);
+            background: url("../img/03/rgt.png") $norepat;
+          }
+          .last{
+            background: url("../img/03/right.png") $norepat;
+          }
+          input{
+            display: inline-block;
+            font-size: 15px;
+            width: pxTorem(87px);
+            height: pxTorem(20px);
+            color: #fff;
+            text-align: center;
+            background: #0A2442;
+            border:1px solid #155C88;
+            border-radius: 5px;
+          }
+        }
+      }
+      .msg{
+        float: right;
+        margin-top: .7rem;
+        font-size: pxTorem(12px);
+      }
+    }
+  }
+}
